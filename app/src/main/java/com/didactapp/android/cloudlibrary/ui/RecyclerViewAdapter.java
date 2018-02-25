@@ -44,8 +44,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 //        TODO: find a way to move picasso out of here and remove global context variable
         Picasso.with(context)
                 .load(R.mipmap.ic_launcher)
-                .placeholder(R.drawable.ic_book_placeholder) // show this image if not loaded yet
-                .error(R.drawable.ic_book_placeholder)      // show this if error or image not exist
+                .placeholder(R.drawable.ic_book) // show this image if not loaded yet
+                .error(R.drawable.ic_book)      // show this if error or image not exist
                 .into(holder.bookImage);
     }
 
