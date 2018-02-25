@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Cloud Library</string>
+    <string name="no_internet_connection">No network connection</string>
+    <string name="book_cover_image">Book cover image</string>
+    <string name="description_placeholder">No Description</string>
+    <string name="title_placeholder">Untitled</string>
+    <string name="book_author_placeholder">Unknown author</string>
+    <string name="error_loading_books">Can\'t load books</string>
+</resources>
