@@ -1,10 +1,19 @@
 <resources>
     <string name="app_name">Cloud Library</string>
-    <string name="no_internet_connection">No network connection</string>
-    <string name="book_cover_image">Book cover image</string>
-    <string name="description_placeholder">No Description</string>
-    <string name="title_placeholder">Untitled</string>
-    <string name="author_placeholder">Unknown author</string>
-    <string name="date_placeholder">dd/mm/yy</string>
+
+    <!-- error messages -->
+    <string name="error_no_network">No network connection</string>
     <string name="error_loading_books">Can\'t load books</string>
+
+    <!-- content descriptions -->
+    <string name="content_desc_cover_image">Book cover image</string>
+
+    <!-- default placeholder texts -->
+    <string name="placeholder_title">Untitled</string>
+    <string name="placeholder_tagline">Tagline unavailable</string>
+    <string name="placeholder_description">No Description</string>
+    <string name="placeholder_author">Unknown author</string>
+    <string name="placeholder_date">dd/mm/yy</string>
+    <string name="placeholder_version">version</string>
+
 </resources>

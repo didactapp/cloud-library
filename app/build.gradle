@@ -25,14 +25,28 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-//    used to parse fake json data
-    compile 'com.google.code.gson:gson:2.8.2'
 //    used to build the recycler grid
     compile 'com.android.support:recyclerview-v7:26.1.0'
-//    used to download and display images
+
+
+    // GSON - used to parse fake json data into POJOs
+    compile 'com.google.code.gson:gson:2.8.2'
+
+    // Picasso -  download and display images
     compile 'com.squareup.picasso:picasso:2.5.2'
-//    log printout library
+
+    /* LogUtils - easy and pretty android log printout library */
     compile 'com.apkfuns.logutils:library:1.5.1.1'
-//    core application module
-    compile 'com.github.didactapp:core-app:0.0.0-pre-alpha'
+
+    // ViewModel and LiveData - lifecycle awareness and state change awareness
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.0"
+
+    // Room - persistence library
+    implementation "android.arch.persistence.room:runtime:1.0.0"
+    annotationProcessor "android.arch.persistence.room:compiler:1.0.0"
+
+    // Paging - library to lazy load data
+//    implementation "android.arch.paging:runtime:1.0.0-alpha6"
+
 }

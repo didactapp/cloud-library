@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
-        android:contentDescription="@string/book_cover_image"
+        android:contentDescription="@string/content_desc_cover_image"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_book" />
 
@@ -20,32 +20,16 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="@dimen/layout_item_divider"
-        android:text="@string/title_placeholder" />
+        android:text="@string/placeholder_title" />
 
     <TextView
-        android:id="@+id/book_author"
+        android:id="@+id/book_tagline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingTop="@dimen/layout_item_divider"
-        android:text="@string/book_author_placeholder"
+        android:text="@string/placeholder_tagline"
         android:textSize="@dimen/typography_body2" />
-
-    <TextView
-        android:id="@+id/book_description"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingTop="@dimen/layout_item_divider"
-        android:text="@string/description_placeholder" />
-
-    <TextView
-        android:id="@+id/book_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingTop="@dimen/layout_item_divider"
-        android:text="@string/date_placeholder" />
 
 
 </LinearLayout>

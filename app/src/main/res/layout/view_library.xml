@@ -13,7 +13,7 @@
         android:visibility="gone"
         app:layoutManager="GridLayoutManager"
         app:spanCount="2"
-        tools:listitem="@layout/book" />
+        tools:listitem="@layout/item_library" />
 
     <TextView
         android:id="@+id/no_network"
@@ -22,7 +22,7 @@
         android:layout_gravity="center"
         android:drawableBottom="@drawable/ic_sad"
         android:gravity="center"
-        android:text="@string/no_internet_connection"
+        android:text="@string/error_no_network"
         android:textSize="@dimen/typography_body1"
         android:visibility="gone" />
 

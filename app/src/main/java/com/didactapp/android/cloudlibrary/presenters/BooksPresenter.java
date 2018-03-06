@@ -1,8 +1,7 @@
-package com.didactapp.android.cloudlibrary;
+package com.didactapp.android.cloudlibrary.presenters;
 
-import com.didactapp.android.coreapp.model.Book;
-
-import java.util.List;
+import com.didactapp.android.cloudlibrary.contracts.BooksContract;
+import com.didactapp.android.cloudlibrary.models.Book;
 
 /**
  * class to handle books presentation logic
@@ -13,9 +12,7 @@ public final class BooksPresenter implements BooksContract.Presenter{
 
     public void loadBooks() {
         view.showSpinner();
-        List<Book> bookList = MockDataSource.getBookList();
         view.hideSpinner();
-        view.showBooks(bookList);
     }
 
     @Override
