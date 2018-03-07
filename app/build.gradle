@@ -49,4 +49,7 @@ dependencies {
     // Paging - library to lazy load data
 //    implementation "android.arch.paging:runtime:1.0.0-alpha6"
 
+    // Retrofit - networking library
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+
 }
