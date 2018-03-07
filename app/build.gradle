@@ -52,4 +52,7 @@ dependencies {
     // Retrofit - networking library
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
 
+    // GSON converter for retrofit
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+
 }
