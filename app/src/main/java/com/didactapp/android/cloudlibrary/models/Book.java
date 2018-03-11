@@ -1,6 +1,5 @@
 package com.didactapp.android.cloudlibrary.models;
 
-import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
@@ -10,45 +9,35 @@ public class Book {
 
     @PrimaryKey
     @NonNull
-    private String bookId;
-    @ColumnInfo
-    private String coveUrl;
-    @ColumnInfo
-    private String thumbnailUrl;
-    @ColumnInfo
-    private String title;
-    @ColumnInfo
-    private String tagLine;
-    @ColumnInfo
-    private String author;
-    @ColumnInfo
-    private String description;
-    @ColumnInfo
-    private String publishedDate;
-    @ColumnInfo
-    private String revisionDate;
-    @ColumnInfo
-    private String version;
+    private final String bookId;
+    private final String coverUrl;
+    private final String thumbnailUrl;
+    private final String title;
+    private final String tagLine;
+    private final String description;
+    private final String publishedDate;
+    private final String revisionDate;
+    private final String version;
 
-    public Book(String bookId, String coveUrl, String thumbnailUrl, String title, String tagLine, String author, String description, String publishedDate, String revisionDate, String version) {
+    public Book(String bookId, String coverUrl, String thumbnailUrl, String title, String tagLine, String description, String publishedDate, String revisionDate, String version) {
         this.bookId = bookId;
-        this.coveUrl = coveUrl;
+        this.coverUrl = coverUrl;
         this.thumbnailUrl = thumbnailUrl;
         this.title = title;
         this.tagLine = tagLine;
-        this.author = author;
         this.description = description;
         this.publishedDate = publishedDate;
         this.revisionDate = revisionDate;
         this.version = version;
     }
 
+    @NonNull
     public String getBookId() {
         return bookId;
     }
 
-    public String getCoveUrl() {
-        return coveUrl;
+    public String getCoverUrl() {
+        return coverUrl;
     }
 
     public String getThumbnailUrl() {
@@ -61,10 +50,6 @@ public class Book {
 
     public String getTagLine() {
         return tagLine;
-    }
-
-    public String getAuthor() {
-        return author;
     }
 
     public String getDescription() {
@@ -87,11 +72,10 @@ public class Book {
     public String toString() {
         return "Book{" +
                 "bookId='" + bookId + '\'' +
-                ", coveUrl='" + coveUrl + '\'' +
+                ", coverUrl='" + coverUrl + '\'' +
                 ", thumbnailUrl='" + thumbnailUrl + '\'' +
                 ", title='" + title + '\'' +
                 ", tagLine='" + tagLine + '\'' +
-                ", author='" + author + '\'' +
                 ", description='" + description + '\'' +
                 ", publishedDate='" + publishedDate + '\'' +
                 ", revisionDate='" + revisionDate + '\'' +

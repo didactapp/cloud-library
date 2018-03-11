@@ -52,7 +52,10 @@ dependencies {
     // Retrofit - networking library
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
 
-    // GSON converter for retrofit
+    // GSON json converter for retrofit
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    // Lottie - json based animations library
+    compile 'com.airbnb.android:lottie:2.5.0'
 
 }
