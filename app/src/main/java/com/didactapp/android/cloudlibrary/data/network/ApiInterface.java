@@ -10,6 +10,6 @@ import retrofit2.http.GET;
 public interface ApiInterface {
 
 
-    @GET("placeholder_api_call.json")
+    @GET("books.json")
     Call<List<Book>> getBookList();
 }

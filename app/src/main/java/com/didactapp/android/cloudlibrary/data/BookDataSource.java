@@ -2,9 +2,7 @@ package com.didactapp.android.cloudlibrary.data;
 
 import android.support.annotation.NonNull;
 
-import com.didactapp.android.cloudlibrary.models.Book;
-
-import java.util.List;
+import com.didactapp.android.cloudlibrary.data.network.RemoteGatewayCallback;
 
 /**
  * Created by roman on 11/03/2018.
@@ -12,16 +10,6 @@ import java.util.List;
 
 public interface BookDataSource {
 
-    void getBookList(@NonNull GetBookListCallback callback);
-
-    interface GetBookListCallback {
-
-        void onBooksLoaded(List<Book> bookList);
-
-        void onDataNotAvailable();
-
-        void onLoadFailed();
-    }
-
+    void getBookList(@NonNull RemoteGatewayCallback callback);
 
 }
