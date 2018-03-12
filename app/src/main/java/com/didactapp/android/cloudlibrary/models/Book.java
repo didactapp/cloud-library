@@ -8,18 +8,17 @@ import android.support.annotation.NonNull;
 public class Book {
 
     @PrimaryKey
-    @NonNull
-    private final String bookId;
+    private final int bookId;
     private final String coverUrl;
     private final String thumbnailUrl;
     private final String title;
     private final String tagLine;
     private final String description;
-    private final String publishedDate;
-    private final String revisionDate;
-    private final String version;
+    private final int publishedDate;
+    private final int revisionDate;
+    private final int version;
 
-    public Book(String bookId, String coverUrl, String thumbnailUrl, String title, String tagLine, String description, String publishedDate, String revisionDate, String version) {
+    public Book(int bookId, String coverUrl, String thumbnailUrl, String title, String tagLine, String description, int publishedDate, int revisionDate, int version) {
         this.bookId = bookId;
         this.coverUrl = coverUrl;
         this.thumbnailUrl = thumbnailUrl;
@@ -32,7 +31,7 @@ public class Book {
     }
 
     @NonNull
-    public String getBookId() {
+    public int getBookId() {
         return bookId;
     }
 
@@ -56,15 +55,15 @@ public class Book {
         return description;
     }
 
-    public String getPublishedDate() {
+    public int getPublishedDate() {
         return publishedDate;
     }
 
-    public String getRevisionDate() {
+    public int getRevisionDate() {
         return revisionDate;
     }
 
-    public String getVersion() {
+    public int getVersion() {
         return version;
     }
 

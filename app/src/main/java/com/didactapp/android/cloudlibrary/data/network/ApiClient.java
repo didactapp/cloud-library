@@ -1,4 +1,4 @@
-package com.didactapp.android.cloudlibrary.network;
+package com.didactapp.android.cloudlibrary.data.network;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;

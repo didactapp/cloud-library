@@ -58,4 +58,6 @@ dependencies {
     // Lottie - json based animations library
     compile 'com.airbnb.android:lottie:2.5.0'
 
+
+
 }

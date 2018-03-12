@@ -5,11 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.apkfuns.logutils.LogUtils;
 import com.didactapp.android.cloudlibrary.R;
+import com.didactapp.android.cloudlibrary.data.network.ApiCallback;
+import com.didactapp.android.cloudlibrary.data.network.ApiClient;
+import com.didactapp.android.cloudlibrary.data.network.ApiInterface;
 import com.didactapp.android.cloudlibrary.models.Book;
-import com.didactapp.android.cloudlibrary.network.ApiCallback;
-import com.didactapp.android.cloudlibrary.network.ApiClient;
-import com.didactapp.android.cloudlibrary.network.ApiInterface;
-import com.didactapp.android.cloudlibrary.util.AppThreadPoolExecutor;
+import com.didactapp.android.cloudlibrary.util.AppExecutor;
 
 import java.io.IOException;
 import java.lang.ref.WeakReference;
@@ -27,7 +27,7 @@ public class BooksActivity extends AppCompatActivity implements ApiCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_library);
 
-        AppThreadPoolExecutor executor = new AppThreadPoolExecutor();
+        AppExecutor executor = new AppExecutor();
 
         getBooks(new WeakReference<ApiCallback>(this));
 

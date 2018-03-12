@@ -3,7 +3,6 @@ package com.didactapp.android.cloudlibrary.models;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
 
 /**
  * Created by roman on 11/03/2018.
@@ -19,19 +18,17 @@ import android.support.annotation.NonNull;
 })
 
 public class BookAuthor {
-    @NonNull
     @PrimaryKey
-    private final String bookId;
+    private final int bookId;
     @PrimaryKey
     private final int authorId;
 
-    public BookAuthor(@NonNull String bookId, int authorId) {
+    public BookAuthor(int bookId, int authorId) {
         this.bookId = bookId;
         this.authorId = authorId;
     }
 
-    @NonNull
-    public String getBookId() {
+    public int getBookId() {
         return bookId;
     }
 

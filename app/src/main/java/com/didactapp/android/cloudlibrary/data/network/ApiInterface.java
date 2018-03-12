@@ -1,4 +1,4 @@
-package com.didactapp.android.cloudlibrary.network;
+package com.didactapp.android.cloudlibrary.data.network;
 
 import com.didactapp.android.cloudlibrary.models.Book;
 

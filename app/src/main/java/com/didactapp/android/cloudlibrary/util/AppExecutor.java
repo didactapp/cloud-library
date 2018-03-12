@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
  * Created by roman on 06/03/2018.
  */
 
-public class AppThreadPoolExecutor {
+public class AppExecutor {
     private static final int THREAD_COUNT = 3;
 
     private final Executor diskIO;
@@ -21,13 +21,13 @@ public class AppThreadPoolExecutor {
     private final Executor mainThread;
 
 
-    private AppThreadPoolExecutor(Executor diskIO, Executor networkIO, Executor mainThread) {
+    private AppExecutor(Executor diskIO, Executor networkIO, Executor mainThread) {
         this.diskIO = diskIO;
         this.networkIO = networkIO;
         this.mainThread = mainThread;
     }
 
-    public AppThreadPoolExecutor() {
+    public AppExecutor() {
         this(new DiskIOThreadExecutor(), Executors.newFixedThreadPool(THREAD_COUNT),
                 new MainThreadExecutor());
     }

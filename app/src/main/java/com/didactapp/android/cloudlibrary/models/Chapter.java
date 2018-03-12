@@ -3,7 +3,6 @@ package com.didactapp.android.cloudlibrary.models;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
 
 import static android.arch.persistence.room.ForeignKey.CASCADE;
 
@@ -15,14 +14,13 @@ public class Chapter {
 
     @PrimaryKey
     private final int chapterId;
-    @NonNull
-    private final String bookId;
+    private final int bookId;
     private final String chapterNum;
     private final String description;
     private final String thumbnailUrl;
 
 
-    public Chapter(int chapterId, String bookId, String chapterNum, String description, String imageUrl) {
+    public Chapter(int chapterId, int bookId, String chapterNum, String description, String imageUrl) {
         this.chapterId = chapterId;
         this.bookId = bookId;
         this.chapterNum = chapterNum;
@@ -30,13 +28,11 @@ public class Chapter {
         this.thumbnailUrl = imageUrl;
     }
 
-    @NonNull
     public int getChapterId() {
         return chapterId;
     }
 
-    @NonNull
-    public String getBookId() {
+    public int getBookId() {
         return bookId;
     }
 

@@ -8,21 +8,15 @@ public class Component {
 
     @PrimaryKey
     private final int componentId;
-    private final String type;
     private final int componentNum;
 
-    public Component(int componentId, String type, int componentNum) {
+    public Component(int componentId, int componentNum) {
         this.componentId = componentId;
-        this.type = type;
         this.componentNum = componentNum;
     }
 
     public int getComponentId() {
         return componentId;
-    }
-
-    public String getType() {
-        return type;
     }
 
     public int getComponentNum() {
