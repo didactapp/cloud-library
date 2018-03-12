@@ -9,10 +9,10 @@ import android.arch.persistence.room.PrimaryKey;
  */
 
 @Entity
-public class UserBook {
+public class UserSection {
     @PrimaryKey
-    @ForeignKey(entity = Book.class, parentColumns = "bookId", childColumns = "bookId")
-    private final int bookId;
+    @ForeignKey(entity = Section.class, parentColumns = "sectionId", childColumns = "sectionId")
+    private final int sectionId;
 
     @PrimaryKey
     @ForeignKey(entity = User.class, parentColumns = "userId", childColumns = "userId")
@@ -20,14 +20,14 @@ public class UserBook {
 
     private final int progress;
 
-    public UserBook(int bookId, int userId, int userProgress) {
-        this.bookId = bookId;
+    public UserSection(int sectionId, int userId, int userProgress) {
+        this.sectionId = sectionId;
         this.userId = userId;
         this.progress = userProgress;
     }
 
-    public int getBookId() {
-        return bookId;
+    public int getSectionId() {
+        return sectionId;
     }
 
     public int getUserId() {

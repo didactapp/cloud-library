@@ -15,12 +15,12 @@ public class Chapter {
     @PrimaryKey
     private final int chapterId;
     private final int bookId;
-    private final String chapterNum;
+    private final int chapterNum;
     private final String description;
     private final String thumbnailUrl;
 
 
-    public Chapter(int chapterId, int bookId, String chapterNum, String description, String imageUrl) {
+    public Chapter(int chapterId, int bookId, int chapterNum, String description, String imageUrl) {
         this.chapterId = chapterId;
         this.bookId = bookId;
         this.chapterNum = chapterNum;
@@ -36,7 +36,7 @@ public class Chapter {
         return bookId;
     }
 
-    public String getChapterNum() {
+    public int getChapterNum() {
         return chapterNum;
     }
 
