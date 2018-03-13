@@ -1,18 +1,20 @@
-package com.didactapp.android.cloudlibrary.models;
+package com.didactapp.android.cloudlibrary.entities;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
+
+import com.didactapp.android.cloudlibrary.models.User;
 
 /**
  * Created by roman on 11/03/2018.
  */
 
 @Entity
-public class UserChapter {
+public class UserBook {
     @PrimaryKey
-    @ForeignKey(entity = Chapter.class, parentColumns = "chapterId", childColumns = "chapterId")
-    private final int chapterId;
+    @ForeignKey(entity = com.didactapp.android.cloudlibrary.models.Book.class, parentColumns = "bookId", childColumns = "bookId")
+    private final int bookId;
 
     @PrimaryKey
     @ForeignKey(entity = User.class, parentColumns = "userId", childColumns = "userId")
@@ -20,14 +22,14 @@ public class UserChapter {
 
     private final int progress;
 
-    public UserChapter(int chapterId, int userId, int userProgress) {
-        this.chapterId = chapterId;
+    public UserBook(int bookId, int userId, int userProgress) {
+        this.bookId = bookId;
         this.userId = userId;
         this.progress = userProgress;
     }
 
-    public int getChapterId() {
-        return chapterId;
+    public int getBookId() {
+        return bookId;
     }
 
     public int getUserId() {

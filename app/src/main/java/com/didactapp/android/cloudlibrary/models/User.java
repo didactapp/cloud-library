@@ -1,25 +1,20 @@
 package com.didactapp.android.cloudlibrary.models;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
+public abstract class User {
 
-@Entity
-public class User {
+    protected final int userId;
+    protected final int userPoints;
 
-    @PrimaryKey
-    private final int userId;
-    private final int userPoints;
-
-    public User(int userId, int userPoints) {
+    protected User(int userId, int userPoints) {
         this.userId = userId;
         this.userPoints = userPoints;
     }
 
-    public int getUserId() {
+    public final int getUserId() {
         return userId;
     }
 
-    public int getUserPoints() {
+    public final int getUserPoints() {
         return userPoints;
     }
 }

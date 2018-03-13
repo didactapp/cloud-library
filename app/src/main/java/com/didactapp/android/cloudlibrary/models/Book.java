@@ -1,24 +1,19 @@
 package com.didactapp.android.cloudlibrary.models;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
 
-@Entity
-public class Book {
+public abstract class Book {
 
-    @PrimaryKey
-    private final int bookId;
-    private final String coverUrl;
-    private final String thumbnailUrl;
-    private final String title;
-    private final String tagLine;
-    private final String description;
-    private final int publishedDate;
-    private final int revisionDate;
-    private final int version;
+    protected final int bookId;
+    protected final String coverUrl;
+    protected final String thumbnailUrl;
+    protected final String title;
+    protected final String tagLine;
+    protected final String description;
+    protected final int publishedDate;
+    protected final int revisionDate;
+    protected final int version;
 
-    public Book(int bookId, String coverUrl, String thumbnailUrl, String title, String tagLine, String description, int publishedDate, int revisionDate, int version) {
+    protected Book(int bookId, String coverUrl, String thumbnailUrl, String title, String tagLine, String description, int publishedDate, int revisionDate, int version) {
         this.bookId = bookId;
         this.coverUrl = coverUrl;
         this.thumbnailUrl = thumbnailUrl;
@@ -30,40 +25,39 @@ public class Book {
         this.version = version;
     }
 
-    @NonNull
-    public int getBookId() {
+    public final int getBookId() {
         return bookId;
     }
 
-    public String getCoverUrl() {
+    public final String getCoverUrl() {
         return coverUrl;
     }
 
-    public String getThumbnailUrl() {
+    public final String getThumbnailUrl() {
         return thumbnailUrl;
     }
 
-    public String getTitle() {
+    public final String getTitle() {
         return title;
     }
 
-    public String getTagLine() {
+    public final String getTagLine() {
         return tagLine;
     }
 
-    public String getDescription() {
+    public final String getDescription() {
         return description;
     }
 
-    public int getPublishedDate() {
+    public final int getPublishedDate() {
         return publishedDate;
     }
 
-    public int getRevisionDate() {
+    public final int getRevisionDate() {
         return revisionDate;
     }
 
-    public int getVersion() {
+    public final int getVersion() {
         return version;
     }
 

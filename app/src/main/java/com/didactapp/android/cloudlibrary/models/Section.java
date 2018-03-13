@@ -1,38 +1,26 @@
 package com.didactapp.android.cloudlibrary.models;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.ForeignKey;
-import android.arch.persistence.room.PrimaryKey;
+public abstract class Section {
 
-import static android.arch.persistence.room.ForeignKey.CASCADE;
+    protected final int sectionId;
+    protected final int chapterId;
+    protected final int sectionNum;
 
-
-@Entity(foreignKeys = @ForeignKey(entity = Chapter.class,
-        parentColumns = "chapterId",
-        childColumns = "sectionId",
-        onDelete = CASCADE))
-public class Section {
-
-    @PrimaryKey
-    private final int sectionId;
-    private final int chapterId;
-    private final int sectionNum;
-
-    public Section(int sectionId, int chapterId, int sectionNum) {
+    protected Section(int sectionId, int chapterId, int sectionNum) {
         this.sectionId = sectionId;
         this.chapterId = chapterId;
         this.sectionNum = sectionNum;
     }
 
-    public int getSectionId() {
+    public final int getSectionId() {
         return sectionId;
     }
 
-    public int getChapterId() {
+    public final int getChapterId() {
         return chapterId;
     }
 
-    public int getSectionNum() {
+    public final int getSectionNum() {
         return sectionNum;
     }
 }

@@ -1,8 +1,10 @@
-package com.didactapp.android.cloudlibrary.models;
+package com.didactapp.android.cloudlibrary.entities;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
+
+import com.didactapp.android.cloudlibrary.models.User;
 
 /**
  * Created by roman on 11/03/2018.
@@ -11,7 +13,7 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity
 public class UserSection {
     @PrimaryKey
-    @ForeignKey(entity = Section.class, parentColumns = "sectionId", childColumns = "sectionId")
+    @ForeignKey(entity = com.didactapp.android.cloudlibrary.models.Section.class, parentColumns = "sectionId", childColumns = "sectionId")
     private final int sectionId;
 
     @PrimaryKey

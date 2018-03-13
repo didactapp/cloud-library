@@ -3,7 +3,7 @@ package com.didactapp.android.cloudlibrary.data.persistence;
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.RoomDatabase;
 
-import com.didactapp.android.cloudlibrary.models.Book;
+import com.didactapp.android.cloudlibrary.entities.Book;
 
 /**
  * Created by roman on 06/03/2018.

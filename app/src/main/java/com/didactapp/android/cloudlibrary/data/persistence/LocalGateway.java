@@ -1,9 +1,12 @@
-package com.didactapp.android.cloudlibrary.data.network;
+package com.didactapp.android.cloudlibrary.data.persistence;
 
 import android.support.annotation.NonNull;
 
 import com.apkfuns.logutils.LogUtils;
 import com.didactapp.android.cloudlibrary.data.BookDataSource;
+import com.didactapp.android.cloudlibrary.data.network.ApiClient;
+import com.didactapp.android.cloudlibrary.data.network.ApiInterface;
+import com.didactapp.android.cloudlibrary.data.network.RemoteGatewayCallback;
 import com.didactapp.android.cloudlibrary.entities.Book;
 
 import java.lang.ref.WeakReference;
@@ -17,19 +20,19 @@ import retrofit2.Response;
  * Created by roman on 12/03/2018.
  */
 
-public class RemoteGateway implements BookDataSource, Callback<List<Book>> {
+public class LocalGateway implements BookDataSource, Callback<List<Book>> {
 
-    private static RemoteGateway INSTANCE = null;
+    private static LocalGateway INSTANCE = null;
 
     private WeakReference<RemoteGatewayCallback> callback = null;
 
-    private RemoteGateway() {
+    private LocalGateway() {
     }
 
 
-    public static RemoteGateway getInstance() {
+    public static LocalGateway getInstance() {
         if (INSTANCE == null) {
-            INSTANCE = new RemoteGateway();
+            INSTANCE = new LocalGateway();
         }
         return INSTANCE;
     }

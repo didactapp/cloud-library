@@ -1,6 +1,5 @@
 package com.didactapp.android.cloudlibrary.contracts;
 
-import com.didactapp.android.cloudlibrary.models.Book;
 import com.didactapp.android.cloudlibrary.presenters.BasePresenter;
 import com.didactapp.android.cloudlibrary.views.BaseView;
 

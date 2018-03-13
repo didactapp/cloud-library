@@ -1,37 +1,42 @@
 package com.didactapp.android.cloudlibrary.models;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
+public abstract class Author {
 
-@Entity
-public class Author {
+    protected final int authorId;
+    protected final String firstName;
+    protected final String lastName;
+    protected final String about;
 
-    @PrimaryKey
-    private final int authorId;
-    private final String firstName;
-    private final String lastName;
-    private final String about;
-
-    public Author(int authorId, String firstName, String lastName, String about) {
+    protected Author(int authorId, String firstName, String lastName, String about) {
         this.authorId = authorId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.about = about;
     }
 
-    public int getAuthorId() {
+    public final int getAuthorId() {
         return authorId;
     }
 
-    public String getFirstName() {
+    public final String getFirstName() {
         return firstName;
     }
 
-    public String getLastName() {
+    public final String getLastName() {
         return lastName;
     }
 
-    public String getAbout() {
+    public final String getAbout() {
         return about;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "authorId=" + authorId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", about='" + about + '\'' +
+                '}';
     }
 }

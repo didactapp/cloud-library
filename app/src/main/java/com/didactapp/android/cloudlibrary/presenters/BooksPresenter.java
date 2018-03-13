@@ -1,7 +1,6 @@
 package com.didactapp.android.cloudlibrary.presenters;
 
 import com.didactapp.android.cloudlibrary.contracts.BooksContract;
-import com.didactapp.android.cloudlibrary.models.Book;
 
 /**
  * class to handle books presentation logic

@@ -1,6 +1,6 @@
 package com.didactapp.android.cloudlibrary.data.network;
 
-import com.didactapp.android.cloudlibrary.models.Book;
+import com.didactapp.android.cloudlibrary.entities.Book;
 
 import java.util.List;
 

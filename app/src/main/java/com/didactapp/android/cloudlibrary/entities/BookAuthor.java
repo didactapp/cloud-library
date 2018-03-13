@@ -1,15 +1,17 @@
-package com.didactapp.android.cloudlibrary.models;
+package com.didactapp.android.cloudlibrary.entities;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 import android.arch.persistence.room.PrimaryKey;
+
+import com.didactapp.android.cloudlibrary.models.Author;
 
 /**
  * Created by roman on 11/03/2018.
  */
 
 @Entity(foreignKeys = {
-        @ForeignKey(entity = Book.class,
+        @ForeignKey(entity = com.didactapp.android.cloudlibrary.models.Book.class,
                 parentColumns = "bookId",
                 childColumns = "bookId"),
         @ForeignKey(entity = Author.class,
@@ -17,7 +19,7 @@ import android.arch.persistence.room.PrimaryKey;
                 childColumns = "authorId")
 })
 
-public class BookAuthor {
+public final class BookAuthor {
     @PrimaryKey
     private final int bookId;
     @PrimaryKey

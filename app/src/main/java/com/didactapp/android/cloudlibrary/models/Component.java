@@ -1,25 +1,20 @@
 package com.didactapp.android.cloudlibrary.models;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
+public abstract class Component {
 
-@Entity
-public class Component {
+    protected final int componentId;
+    protected final int componentNum;
 
-    @PrimaryKey
-    private final int componentId;
-    private final int componentNum;
-
-    public Component(int componentId, int componentNum) {
+    protected Component(int componentId, int componentNum) {
         this.componentId = componentId;
         this.componentNum = componentNum;
     }
 
-    public int getComponentId() {
+    public final int getComponentId() {
         return componentId;
     }
 
-    public int getComponentNum() {
+    public final int getComponentNum() {
         return componentNum;
     }
 }

@@ -5,7 +5,7 @@ import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
-import com.didactapp.android.cloudlibrary.models.Book;
+import com.didactapp.android.cloudlibrary.entities.Book;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import java.util.List;
 
 @Dao
 public interface BookDao {
-    @Query("SELECT * FROM book")
+    @Query("SELECT * FROM Book")
     List<Book> getAll();
 
     @Insert

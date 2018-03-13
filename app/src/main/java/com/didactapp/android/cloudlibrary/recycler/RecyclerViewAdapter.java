@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.didactapp.android.cloudlibrary.R;
-import com.didactapp.android.cloudlibrary.models.Book;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

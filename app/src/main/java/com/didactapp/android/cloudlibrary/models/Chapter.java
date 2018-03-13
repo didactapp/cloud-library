@@ -1,26 +1,15 @@
 package com.didactapp.android.cloudlibrary.models;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.ForeignKey;
-import android.arch.persistence.room.PrimaryKey;
+public abstract class Chapter {
 
-import static android.arch.persistence.room.ForeignKey.CASCADE;
-
-@Entity(foreignKeys = @ForeignKey(entity = Book.class,
-        parentColumns = "bookId",
-        childColumns = "chapterId",
-        onDelete = CASCADE))
-public class Chapter {
-
-    @PrimaryKey
-    private final int chapterId;
-    private final int bookId;
-    private final int chapterNum;
-    private final String description;
-    private final String thumbnailUrl;
+    protected final int bookId;
+    protected final int chapterId;
+    protected final int chapterNum;
+    protected final String description;
+    protected final String thumbnailUrl;
 
 
-    public Chapter(int chapterId, int bookId, int chapterNum, String description, String imageUrl) {
+    protected Chapter(int chapterId, int bookId, int chapterNum, String description, String imageUrl) {
         this.chapterId = chapterId;
         this.bookId = bookId;
         this.chapterNum = chapterNum;
@@ -28,23 +17,34 @@ public class Chapter {
         this.thumbnailUrl = imageUrl;
     }
 
-    public int getChapterId() {
+    public final int getChapterId() {
         return chapterId;
     }
 
-    public int getBookId() {
+    public final int getBookId() {
         return bookId;
     }
 
-    public int getChapterNum() {
+    public final int getChapterNum() {
         return chapterNum;
     }
 
-    public String getDescription() {
+    public final String getDescription() {
         return description;
     }
 
-    public String getThumbnailUrl() {
+    public final String getThumbnailUrl() {
         return thumbnailUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "Chapter{" +
+                "bookId=" + bookId +
+                ", chapterId=" + chapterId +
+                ", chapterNum=" + chapterNum +
+                ", description='" + description + '\'' +
+                ", thumbnailUrl='" + thumbnailUrl + '\'' +
+                '}';
     }
 }
