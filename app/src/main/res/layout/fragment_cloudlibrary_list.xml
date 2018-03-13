@@ -9,5 +9,5 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
-    tools:context="com.didactapp.android.cloudlibrary.fragments.LibraryFragment"
+    tools:context="com.didactapp.commons.cloudlibrary.fragments.LibraryFragment"
     tools:listitem="@layout/fragment_cloudlibrary" />

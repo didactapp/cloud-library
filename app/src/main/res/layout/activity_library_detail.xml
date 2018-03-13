@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.didactapp.android.cloudlibrary.activities.DetailActivity">
+    tools:context="com.didactapp.commons.cloudlibrary.activities.DetailActivity">
 
     <include layout="@layout/view_library_detail" />
 
